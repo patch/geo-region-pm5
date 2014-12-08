@@ -98,6 +98,9 @@ This document describes Geo::Region::Constant v0.05, built with Unicode CLDR v26
 
     use Geo::Region::Constant qw( :all );
 
+    LATIN_AMERICA   # '419'
+    EUROPEAN_UNION  # 'EU'
+
 =head1 DESCRIPTION
 
 Exportable constants for UN M.49 region codes, including CLDR extensions,

@@ -300,6 +300,8 @@ Codes|http://unstats.un.org/unsd/methods/m49/m49regin.htm>
 
 =item L<Locale::CLDR: Territory Containment|Locale::CLDR/Territory-Containment>
 
+=item L<Geo::Region|https://github.com/patch/geo-region-pm6> for Perl 6
+
 =back
 
 =head1 AUTHOR

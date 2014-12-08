@@ -129,6 +129,7 @@ Containment](http://unicode.org/cldr/charts/26/supplemental/territory_containmen
 - [United Nations: UN M.49 Standard Country, Area, & Region
 Codes](http://unstats.un.org/unsd/methods/m49/m49regin.htm)
 - [Locale::CLDR: Territory Containment](https://metacpan.org/pod/Locale::CLDR#Territory-Containment)
+- [Geo::Region](https://github.com/patch/geo-region-pm6) for Perl 6
 
 # AUTHOR
 
