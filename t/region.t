@@ -1,6 +1,6 @@
 use utf8;
 use open qw( :encoding(UTF-8) :std );
-use Test::Most tests => 10;
+use Test::Most tests => 11;
 use Geo::Region;
 
 subtest 'default empty region' => sub {
@@ -19,9 +19,16 @@ subtest 'explicit empty region' => sub {
     is_deeply [$r->countries],   [], 'no countries';
 };
 
-subtest 'single argument instantiation' => sub {
+subtest 'single-argument constructor' => sub {
     plan tests => 1;
     my $r = Geo::Region->new(53);
+
+    is_deeply [$r->countries], [qw( AU NF NZ )], 'expected countries';
+};
+
+subtest 'hashref constructor' => sub {
+    plan tests => 1;
+    my $r = Geo::Region->new({ include => 53 });
 
     is_deeply [$r->countries], [qw( AU NF NZ )], 'expected countries';
 };

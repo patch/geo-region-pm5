@@ -140,7 +140,9 @@ sub BUILDARGS {
     my ($class, @args) = @_;
 
     # the `include` key is optional for the first argument
-    my %args = @args % 2 ? (include => @args) : @args;
+    my %args = @args == 1 && ref $args[0] eq 'HASH' ? %{$args[0]}        :
+               @args % 2                            ? (include => @args) :
+                                                      @args              ;
 
     if (exists $args{region}) {
         carp 'Argument "region" is deprecated; use "include" instead';
