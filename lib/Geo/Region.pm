@@ -54,8 +54,8 @@ my %noncountries = map { $_ => 1 } qw(
 
 # deprecated aliases
 my %alias_of = (
-    UK => 'GB',
     QU => 'EU',
+    UK => 'GB',
 );
 
 sub coerce_regions {

@@ -48,10 +48,10 @@ subtest 'World (001) superregion' => sub {
     ok $r->contains('BF'),  'region contains country';
     ok $r->contains('bf'),  'region contains lowercase country';
     ok $r->contains( 1, 2, 11, 'BF' ), 'multiple containment args';
-    ok $r->contains([1, 2, 11, 'BF']), 'arrayreg containment arg';
+    ok $r->contains([1, 2, 11, 'BF']), 'arrayref containment arg';
 
     my @countries = $r->countries;
-    is         @countries,  256,               'has expected # of countries';
+    is         @countries,  256,               'expected # of countries';
     like      "@countries", qr/^[A-Z ]+$/,     'countries are uppercase';
     is_deeply \@countries,  [sort @countries], 'countries are sorted';
 
@@ -112,11 +112,10 @@ subtest 'Europe (150) − European Union (EU)' => sub {
     ok !$r->contains('EU'), '!contains excluded region';
     ok !$r->contains('FR'), '!contains countries within excluded region';
 
-    is_deeply(
-        [$r->countries],
-        [qw( AD AL AX BA BY CH FO GG GI IM IS JE LI MC MD ME MK NO RS RU SJ SM UA VA XK )],
-        'return all countries within included except excluded'
-    );
+    is_deeply [$r->countries], [qw(
+        AD AL AX BA BY CH FO GG GI IM IS JE LI
+        MC MD ME MK NO RS RU SJ SM UA VA XK
+    )], 'return all countries within included except excluded';
 };
 
 subtest 'deprecated alias QU for EU' => sub {
