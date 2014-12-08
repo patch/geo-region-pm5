@@ -290,7 +290,7 @@ by the Geo::Region instance.
 
 =over
 
-=item L<Geo::Region::Constant>: Constants for UN M.49 and CLDR region codes
+=item L<Geo::Region::Constant> — Constants for UN M.49 and CLDR region codes
 
 =item L<Unicode CLDR: UN M.49 Territory
 Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>

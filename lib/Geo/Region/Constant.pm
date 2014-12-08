@@ -145,8 +145,8 @@ export tag.
 
 =over
 
-=item L<Geo::Region::Constant>: Geographical regions and groupings using UN M.49
-and CLDR data
+=item L<Geo::Region> — Geographical regions and groupings using UN M.49 and CLDR
+data
 
 =item L<Unicode CLDR: UN M.49 Territory
 Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>

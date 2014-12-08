@@ -123,7 +123,7 @@ The `new` class method is used to construct a Geo::Region object along with the
 
 # SEE ALSO
 
-- [Geo::Region::Constant](https://metacpan.org/pod/Geo::Region::Constant): Constants for UN M.49 and CLDR region codes
+- [Geo::Region::Constant](https://metacpan.org/pod/Geo::Region::Constant) — Constants for UN M.49 and CLDR region codes
 - [Unicode CLDR: UN M.49 Territory
 Containment](http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html)
 - [United Nations: UN M.49 Standard Country, Area, & Region
