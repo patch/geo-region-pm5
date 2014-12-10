@@ -247,8 +247,8 @@ C<include> key.
     Geo::Region->new( EUROPEAN_UNION )
 
     # countries in Asia (142) plus Russia (RU)
-    Geo::Region->new( include => [ ASIA, 'RU' ])
-    Geo::Region->new([ ASIA, 'RU' ])
+    Geo::Region->new( include => [ ASIA, RUSSIA ])
+    Geo::Region->new([ ASIA, RUSSIA ])
 
 =item C<exclude>
 
