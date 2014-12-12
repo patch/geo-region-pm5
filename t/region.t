@@ -44,7 +44,7 @@ subtest 'deprecated region param' => sub {
 };
 
 subtest 'World (001) superregion' => sub {
-    plan tests => 44;
+    plan tests => 42;
     my $r = Geo::Region->new(include => 1);
 
     ok $r->is_within(1),    'region is within itself';
@@ -54,8 +54,6 @@ subtest 'World (001) superregion' => sub {
     ok $r->contains('011'), 'region contains subsubregion string';
     ok $r->contains('BF'),  'region contains country';
     ok $r->contains('bf'),  'region contains lowercase country';
-    ok $r->contains( 1, 2, 11, 'BF' ), 'multiple containment args';
-    ok $r->contains([1, 2, 11, 'BF']), 'arrayref containment arg';
 
     my @countries = $r->countries;
     is         @countries,  256,               'expected # of countries';
@@ -76,7 +74,7 @@ subtest 'World (001) superregion' => sub {
 };
 
 subtest 'Mexico (MX) country' => sub {
-    plan tests => 12;
+    plan tests => 10;
     my $r = Geo::Region->new(include => 'MX');
 
     ok $r->contains('MX'),  'country contains itself';
@@ -88,20 +86,19 @@ subtest 'Mexico (MX) country' => sub {
     ok $r->is_within(1),    'within World (001) region';
     ok $r->is_within(3),    'within North America (003) grouping';
     ok $r->is_within(419),  'within Latin America (419) grouping';
-    ok $r->is_within( 1, 3, 13, 19, 419, 'MX' ), 'multiple within args';
-    ok $r->is_within([1, 3, 13, 19, 419, 'MX']), 'arrayref within arg';
     is_deeply [$r->countries], ['MX'], 'only one country in a country';
 };
 
 subtest 'Central Asia (143) + Russia (RU)' => sub {
-    plan tests => 6;
+    plan tests => 7;
     my $r = Geo::Region->new(include => [143, 'RU']);
 
-    ok $r->contains(143, 'RU'), 'contains both included regions';
-    ok $r->contains('KZ'),      'contains regions within any included';
-    ok $r->is_within(1),        'within regions shared by all included';
-    ok !$r->is_within(143),     'not within either included region';
-    ok !$r->is_within('RU'),    'not within either included region';
+    ok $r->contains(143),    'contains included region';
+    ok $r->contains('RU'),   'contains included country';
+    ok $r->contains('KZ'),   'contains country within any included region';
+    ok $r->is_within(1),     'within regions shared by all included';
+    ok !$r->is_within(143),  'not within either included region';
+    ok !$r->is_within('RU'), 'not within either included region';
 
     is_deeply(
         [$r->countries],

@@ -58,25 +58,37 @@ my %alias_of = (
     UK => 'GB',
 );
 
+sub coerce_region {
+    my ($region) = @_;
+
+    return sprintf('%03d', $region)
+        if looks_like_number $region;
+
+    return $alias_of{uc $region}
+        || uc $region;
+}
+
 sub coerce_regions {
-    map  { $alias_of{$_} || $_ }
-    map  { looks_like_number $_ ? sprintf('%03d', $_) : uc }
-    grep { defined }
-    map  { ref eq 'ARRAY' ? @$_ : $_ } @_
+    my ($regions) = @_;
+
+    return [
+        map { coerce_region($_) }
+        ref $regions eq 'ARRAY' ? @$regions : $regions
+    ];
 }
 
 use namespace::clean;
 
 has _includes => (
     is       => 'ro',
-    coerce   => sub { [ coerce_regions(shift) ] },
+    coerce   => sub { coerce_regions(shift) },
     default  => sub { [] },
     init_arg => 'include',
 );
 
 has _excludes => (
     is       => 'ro',
-    coerce   => sub { [ coerce_regions(shift) ] },
+    coerce   => sub { coerce_regions(shift) },
     default  => sub { [] },
     init_arg => 'exclude',
 );
@@ -153,13 +165,13 @@ sub BUILDARGS {
 }
 
 sub contains {
-    my ($self, @regions) = @_;
-    return all { exists $self->_children->{$_} } coerce_regions(@regions);
+    my ($self, $region) = @_;
+    return exists $self->_children->{ coerce_region($region) };
 }
 
 sub is_within {
-    my ($self, @regions) = @_;
-    return all { exists $self->_parents->{$_} } coerce_regions(@regions);
+    my ($self, $region) = @_;
+    return exists $self->_parents->{ coerce_region($region) };
 }
 
 sub countries {
