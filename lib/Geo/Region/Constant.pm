@@ -923,13 +923,13 @@ The 249 officially assigned ISO 3166-1 alpha-2 codes.
 
 =over
 
-=item L<Geo::Region> — Geographical regions and groupings using UN M.49 and CLDR
+=item * L<Geo::Region> — Geographical regions and groupings using UN M.49 and CLDR
 data
 
-=item L<Unicode CLDR: UN M.49 Territory
+=item * L<Unicode CLDR: UN M.49 Territory
 Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>
 
-=item L<United Nations: UN M.49 Standard Country, Area, & Region
+=item * L<United Nations: UN M.49 Standard Country, Area, & Region
 Codes|http://unstats.un.org/unsd/methods/m49/m49regin.htm>
 
 =back

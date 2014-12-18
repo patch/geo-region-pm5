@@ -304,17 +304,17 @@ by the Geo::Region instance.
 
 =over
 
-=item L<Geo::Region::Constant> — Constants for UN M.49 and CLDR region codes
+=item * L<Geo::Region::Constant> — Constants for UN M.49 and CLDR region codes
 
-=item L<Unicode CLDR: UN M.49 Territory
+=item * L<Unicode CLDR: UN M.49 Territory
 Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>
 
-=item L<United Nations: UN M.49 Standard Country, Area, & Region
+=item * L<United Nations: UN M.49 Standard Country, Area, & Region
 Codes|http://unstats.un.org/unsd/methods/m49/m49regin.htm>
 
-=item L<Locale::CLDR: Territory Containment|Locale::CLDR/Territory-Containment>
+=item * L<Locale::CLDR: Territory Containment|Locale::CLDR/Territory-Containment>
 
-=item L<Geo::Region|https://github.com/patch/geo-region-pm6> for Perl 6
+=item * L<Geo::Region|https://github.com/patch/geo-region-pm6> for Perl 6
 
 =back
 
