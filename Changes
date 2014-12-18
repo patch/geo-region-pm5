@@ -1,5 +1,17 @@
 Revision history for Perl module Geo::Region
 
+0.06 2014-12-17
+ [ Geo::Region ]
+ - Constructor arguments may now optionally be passed as a hashref to `new`
+ - `contains` and `is_within` methods now only accept a single region as a
+   scalar value and no longer accept a list or arrayref of regions, which was
+   never a documented feature
+
+ [ Geo::Region::Constant ]
+ - Added constants for ISO 3166-1 alpha-2 country codes
+ - Added `:region` and `:country` export tags, in addition to `:all`, for
+   exporting region constants or country constants, respectively
+
 0.05 2014-12-05
  - Added Geo::Region::Constant to provide named constants for all supported
    region codes
