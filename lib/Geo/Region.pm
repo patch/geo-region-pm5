@@ -151,10 +151,13 @@ has _countries => (
 sub BUILDARGS {
     my ($class, @args) = @_;
 
+    # constructor arguments passed as hashref
+    return $args[0]
+        if @args == 1
+        && ref $args[0] eq 'HASH';
+
     # the `include` key is optional for the first argument
-    my %args = @args == 1 && ref $args[0] eq 'HASH' ? %{$args[0]}        :
-               @args % 2                            ? (include => @args) :
-                                                      @args              ;
+    my %args = @args % 2 ? (include => @args) : @args;
 
     if (exists $args{region}) {
         carp 'Argument "region" is deprecated; use "include" instead';
