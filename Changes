@@ -1,5 +1,9 @@
 Revision history for Perl module Geo::Region
 
+0.07 2015-03-23
+ - Upgraded from CLDR v26 to v27, which only changed the version number and no
+   functional or data changes affecting Geo::Region
+
 0.06 2014-12-17
  [ Geo::Region ]
  - Constructor arguments may now optionally be passed as a hashref to `new`

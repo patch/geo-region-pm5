@@ -293,7 +293,7 @@ use constant {
     ZIMBABWE                             => 'ZW',
 };
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 my @region = qw(
     AFRICA
@@ -602,7 +602,7 @@ Geo::Region::Constant - Constants for UN M.49 and CLDR region codes
 
 =head1 VERSION
 
-This document describes Geo::Region::Constant v0.06, built with Unicode CLDR v27.
+This document describes Geo::Region::Constant v0.07, built with Unicode CLDR v27.
 
 =head1 SYNOPSIS
 
@@ -945,7 +945,7 @@ L<code.shutterstock.com|http://code.shutterstock.com/>.
 
 =head1 COPYRIGHT AND LICENSE
 
-© 2014 Shutterstock, Inc.
+© 2014–2015 Shutterstock, Inc.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
