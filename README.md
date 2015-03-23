@@ -8,7 +8,7 @@ Geo::Region - Geographical regions and groupings using UN M.49 and CLDR data
 
 # VERSION
 
-This document describes Geo::Region v0.06, built with Unicode CLDR v26.
+This document describes Geo::Region v0.06, built with Unicode CLDR v27.
 
 # SYNOPSIS
 
@@ -35,8 +35,8 @@ elsif ( $apac->contains($country) ) {
 
 This class is used to create geographical regions and groupings of subregions
 and countries. Default regional groupings are provided using the [Unicode CLDR
-v26 Territory
-Containment](http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html)
+v27 Territory
+Containment](http://unicode.org/cldr/charts/27/supplemental/territory_containment_un_m_49.html)
 data, which is an extension of the United Nations [UN
 M.49 (Rev.3)](http://unstats.un.org/unsd/methods/m49/m49regin.htm) standard.
 
@@ -125,7 +125,7 @@ The `new` class method is used to construct a Geo::Region object along with the
 
 - [Geo::Region::Constant](https://metacpan.org/pod/Geo::Region::Constant) — Constants for UN M.49 and CLDR region codes
 - [Unicode CLDR: UN M.49 Territory
-Containment](http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html)
+Containment](http://unicode.org/cldr/charts/27/supplemental/territory_containment_un_m_49.html)
 - [United Nations: UN M.49 Standard Country, Area, & Region
 Codes](http://unstats.un.org/unsd/methods/m49/m49regin.htm)
 - [Locale::CLDR: Territory Containment](https://metacpan.org/pod/Locale::CLDR#Territory-Containment)

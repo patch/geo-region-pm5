@@ -194,7 +194,7 @@ Geo::Region - Geographical regions and groupings using UN M.49 and CLDR data
 
 =head1 VERSION
 
-This document describes Geo::Region v0.06, built with Unicode CLDR v26.
+This document describes Geo::Region v0.06, built with Unicode CLDR v27.
 
 =head1 SYNOPSIS
 
@@ -219,8 +219,8 @@ This document describes Geo::Region v0.06, built with Unicode CLDR v26.
 
 This class is used to create geographical regions and groupings of subregions
 and countries. Default regional groupings are provided using the L<Unicode CLDR
-v26 Territory
-Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>
+v27 Territory
+Containment|http://unicode.org/cldr/charts/27/supplemental/territory_containment_un_m_49.html>
 data, which is an extension of the United Nations L<UN
 M.49 (Rev.3)|http://unstats.un.org/unsd/methods/m49/m49regin.htm> standard.
 
@@ -310,7 +310,7 @@ by the Geo::Region instance.
 =item * L<Geo::Region::Constant> — Constants for UN M.49 and CLDR region codes
 
 =item * L<Unicode CLDR: UN M.49 Territory
-Containment|http://unicode.org/cldr/charts/26/supplemental/territory_containment_un_m_49.html>
+Containment|http://unicode.org/cldr/charts/27/supplemental/territory_containment_un_m_49.html>
 
 =item * L<United Nations: UN M.49 Standard Country, Area, & Region
 Codes|http://unstats.un.org/unsd/methods/m49/m49regin.htm>
